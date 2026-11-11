@@ -1,0 +1,18 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build-test:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        config:
+          - { name: release, flags: "-DCMAKE_BUILD_TYPE=Release" }
+          - { name: asan-ubsan, flags: "-DCMAKE_BUILD_TYPE=Debug -DACTLAB_SANITIZE=ON" }
+          - { name: tsan, flags: "-DCMAKE_BUILD_TYPE=Debug -DACTLAB_TSAN=ON" }
+    name: ${{ matrix.config.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build libeigen3-dev libgtest-dev
+      - run: cmake -S . -B build -G Ninja ${{ matrix.config.flags }}
+      - run: cmake --build build
+      - run: cd build && ctest --output-on-failure

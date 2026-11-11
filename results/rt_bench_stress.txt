@@ -1,0 +1,8 @@
+telemetry rows dropped: 0
+rt_loop_bench: 10.0 s, stress threads=2, SCHED_FIFO granted to 2/2 threads, mlockall=yes
+  wake latency  p50 19.2 us  p99 142.3 us  p99.9 1256.3 us  max 3590.7 us
+  compute time  p50 0.31 us  p99 0.93 us  max 35.65 us
+  deadline misses (late by > 1 period): 29 of 10000
+  command age at drive  p50 0  p99 1  max 1 cycles
+  watchdog trips: 1
+  link tracking RMS: 0.341 mrad

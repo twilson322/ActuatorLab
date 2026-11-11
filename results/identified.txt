@@ -1,0 +1,8 @@
+# written by scripts/identify.py from results/chirp_plant.csv
+f_antires_hz=12.9692
+f_res_hz=28.6431
+Jm=6.396093e-05
+Jl_out=0.620049
+k_out=4117.304
+d_out=4.0573
+delay_us=853.33

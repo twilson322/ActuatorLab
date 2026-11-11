@@ -1,0 +1,9 @@
+controller,window,rms_err_mrad,diverged_at_s
+dual_pi_notch,before_3to4s,0.3079,
+dual_pi_notch,after_6to8s,255.1048,
+dual_rls,before_3to4s,85.5007,
+dual_rls,after_6to8s,,6.402
+lqg,before_3to4s,0.2885,
+lqg,after_6to8s,1.6500,
+lqg_rls,before_3to4s,0.2950,
+lqg_rls,after_6to8s,0.4785,
